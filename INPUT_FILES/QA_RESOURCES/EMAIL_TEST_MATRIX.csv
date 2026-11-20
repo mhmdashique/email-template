@@ -1,0 +1,13 @@
+Test_ID,Test_Condition,Expected_Result,Environment,Actual_Result,Evidence_Reference
+T01,375px width,No horizontal scroll and readable copy,,,
+T02,600px width,Email body centered and images fit,,,
+T03,Desktop 1440px,Layout retains 600px inner content,,,
+T04,Images blocked,Alt text remains meaningful,,,
+T05,CTA action,Local preview destination responds,,,
+T06,Footer navigation,"Preferences, unsubscribe and contact anchors work",,,
+T07,No JavaScript,No script tags or JS event handlers,,,
+T08,Inline CSS,Essential visual styling on individual elements,,,
+T09,Table layout,Content uses presentation tables,,,
+T10,Outlook rendering,Record actual Outlook result only if tested,,,
+T11,Gmail mobile rendering,Record actual Gmail mobile result only if tested,,,
+T12,Apple Mail rendering,Record actual Apple Mail result only if tested,,,

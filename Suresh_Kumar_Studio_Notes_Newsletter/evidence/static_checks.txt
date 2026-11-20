@@ -1,0 +1,15 @@
+Static Checks Output:
+- File: deliverables/newsletter.html
+- File Size: 19,699 bytes (19.24 KB) — Threshold: < 100 KB [PASS]
+- <script> tags: 0 [PASS]
+- Inline JavaScript event handlers: 0 [PASS]
+- External stylesheets (rel="stylesheet"): 0 [PASS]
+- CSS Grid rules (display: grid): 0 [PASS]
+- CSS Flexbox rules (display: flex): 0 [PASS]
+- <img> tags without alt attribute: 0 [PASS]
+- Design-reference PNGs referenced (desktop_1440.png / mobile_375.png): 0 [PASS]
+- Total <table> tags: 15
+- Tables with role="presentation": 15 (100% compliance) [PASS]
+- Embedded <style> blocks: 1 (containing exactly 1 @media (max-width:600px) query) [PASS]
+- Essential CSS: 100% inline on elements [PASS]
+

@@ -1,0 +1,9 @@
+Suresh Kumar Studio Notes — email technical specification
+1. Produce one newsletter.html file using nested presentation tables, role="presentation", cellpadding=0, cellspacing=0, border=0. Width 100% wrapper; max-width 600px content.
+2. Essential CSS must be inline; optional @media rule in a minimal <style> block is allowed only for breakpoint-specific stacking. No external CSS or CSS Grid/Flexbox.
+3. Use meaningful alt text for informational images and empty alt for decorative ones. All copy is supplied in CONTENT_AND_DESIGN.txt.
+4. Keep HTML below 100 KB excluding images. Supply optimized PNG/JPG for hosted email use (SVG is source artwork, not required as an email attachment).
+5. Final HTML cannot rely on localhost for actual email distribution. For offline verification, use LOCAL_PREVIEW URL and record it as local-only.
+6. Test preview widths 375px, 600px and desktop; check keyboard accessibility, headings, links, image fallback and Outlook-style table compatibility by inspection. Document ONLY actual email client tests if performed.
+7. Document test client/browser, version when known, viewport, date, pass/fail and evidence reference. Do not state tested in Outlook/Gmail/Apple Mail without using those clients.
+8. Filename: SureshKumar_StudioNotes_Nov2026.html. Include optimized image assets and TEST_RESULTS.csv.

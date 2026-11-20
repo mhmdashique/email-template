@@ -1,0 +1,7 @@
+Submit one Google Drive folder shared with authorized reviewer as Viewer, containing:
+[ ] SureshKumar_StudioNotes_Nov2026.html — complete responsive email (not the starter)
+[ ] IMAGE_ASSETS/ — all optimized raster images actually referenced by the final HTML
+[ ] TEST_RESULTS.csv — completed, evidence-based email/browser compatibility checks
+[ ] TECHNICAL_SUMMARY.txt or .pdf — structure, styling approach, image sizes, test environments and known limitations
+[ ] COMPLETION_NOTE.txt — brief list of outputs and location of any screenshots
+No claim of actual email-client compatibility unless tested. Do not send an email or upload private contacts without authorization.

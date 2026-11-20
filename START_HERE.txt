@@ -1,0 +1,25 @@
+SURESH KUMAR — RESPONSIVE HTML EMAIL
+Job ID: YJoBaWMJ8i2uJggm8fvQ
+Confirmed compensation: INR 726 | Deadline: 18 November 2026 | Duration: 1 business day
+
+Objective: Convert the supplied Studio Notes newsletter desktop/mobile references into one responsive, table-based email using inline CSS and produce a factual test-results audit.
+
+INPUTS
+INPUT_FILES/DESIGN_REFERENCES/desktop_1440.png and mobile_375.png
+INPUT_FILES/BRAND_ASSETS/ (logo, hero, icons in SVG/PNG)
+INPUT_FILES/CONTENT_AND_DESIGN.txt
+INPUT_FILES/EMAIL_TECHNICAL_SPECIFICATION.txt
+INPUT_FILES/STARTER/starter.html
+INPUT_FILES/LANDING_PAGE/index.html
+INPUT_FILES/QA_RESOURCES/EMAIL_TEST_MATRIX.csv
+
+STEPS
+1. Review both visual references, brand images, all copy and technical specification.
+2. Extend STARTER/starter.html into the complete newsletter using nested tables and inline CSS for essential styling. Use minimal media-query CSS for mobile if required.
+3. Optimize images and set their alt text; include all newsletter sections and footer copy.
+4. Serve INPUT_FILES locally (python -m http.server 8000 from INPUT_FILES) and verify the local landing-page CTA and footer links. Record localhost destinations as local preview only, not production URLs.
+5. Check 375px, 600px and desktop layouts. Perform actual email-client tests if accessible and record their real outcomes in the supplied test matrix; do not invent test passes.
+6. Deliver the final HTML, optimized image folder, technical summary, and completed results matrix in one Google Drive folder with Viewer access to the authorized reviewer.
+
+ACCEPTANCE
+No JS, CSS Grid/Flexbox, or linked stylesheets; table-based markup; accessible image alt text; responsive mobile layout; clear inline styles; reliable local link checks and truthful test documentation. Freelancer creates the final HTML; the starter is intentionally partial.

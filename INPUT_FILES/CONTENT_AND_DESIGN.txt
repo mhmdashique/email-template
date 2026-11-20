@@ -1,0 +1,51 @@
+SURESH KUMAR — STUDIO NOTES | NOVEMBER 2026
+CAMPAIGN: Small changes. Sharper teams.
+
+PURPOSE
+A monthly operational-improvement newsletter for managers of small service businesses.
+Audience: operations leads and founders who want practical, low-friction team workflows.
+Tone: useful, confident, calm, not sales-heavy. Never promise specific results.
+
+HEADER
+Logo: SURESH KUMAR — STUDIO NOTES
+Eyebrow: A BETTER WAY TO WORK
+Headline: Small changes. Sharper teams.
+Intro: A practical note on clear priorities, smoother handoffs, and weekly progress.
+CTA: EXPLORE THE FRAMEWORK
+
+SECTION: THREE IDEAS TO TAKE FORWARD
+1 / CLARITY — Plan with a purpose
+Create a weekly view of the decisions that matter.
+2 / MOMENTUM — Build lighter workflows
+Make handoffs clear, repeatable and easy to track.
+3 / PROGRESS — Improve with evidence
+Review outcomes and keep the changes that work.
+
+SECONDARY BANNER
+Ready for a clearer next week?
+Get the checklist and start with one improvement.
+CTA: READ THE CHECKLIST
+
+FOOTER
+Suresh Kumar | Studio Notes
+Monthly ideas on practical business operations.
+You are receiving this newsletter by subscription.
+Preferences | Unsubscribe | Contact
+
+LINKS
+Local landing page: INPUT_FILES/LANDING_PAGE/index.html
+Preview workflow: serve INPUT_FILES as local root using python -m http.server 8000; CTA URL is http://localhost:8000/LANDING_PAGE/index.html?utm_source=newsletter&utm_medium=email&utm_campaign=nov2026_studio_notes
+This local URL must be replaced with an authorized hosted destination before any sending. No live sending is requested.
+Use functioning local footer destinations on that page (#preferences, #unsubscribe, #contact). Do not invent an address or subscription consent.
+
+VISUAL SPEC
+Desktop design reference: DESIGN_REFERENCES/desktop_1440.png
+Mobile design reference: DESIGN_REFERENCES/mobile_375.png
+Email body max width: 600px; content inset: 24px desktop, 16px mobile
+Palette: Navy #132B3D, teal #007F79, pale aqua #DDF3EE, warm white #FAF8F3, gold #E0A85F, muted #54717E
+Fonts: Arial, Helvetica, sans-serif; H1 30px desktop / 25px mobile; body 16px; CTA 15px bold
+Image assets: Use exact image asset names from ASSET_MANIFEST.csv.
+Accessible alt texts: logo 'Suresh Kumar Studio Notes'; hero 'Illustration of a team workflow dashboard'; icons 'Plan', 'Build', 'Improve' (or decorative empty alt when adjacent text conveys the meaning).
+
+EMAIL IMPLEMENTATION
+Use presentation tables and inline CSS for essential layout, typography and colors; minimal embedded media query for mobile stacking if necessary. No CSS Grid, Flexbox, JavaScript or linked stylesheets. Complete all copy and working local destinations. Mail-merge personal data is not required.
