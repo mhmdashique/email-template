@@ -3,61 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Suresh Kumar — Studio Notes</title>
+  <title>Suresh Kumar — Studio Notes | November 2026</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, Helvetica, sans-serif; background-color: #FAF8F3; color: #132B3D; line-height: 1.6; }
 
-    /* HEADER */
+    /* ── HEADER ── */
     header { background-color: #132B3D; width: 100%; }
     .header-inner { max-width: 600px; margin: 0 auto; padding: 20px 24px; }
-    .header-title { color: #FFFFFF; font-size: 22px; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.2; }
+    .header-title { color: #FFFFFF; font-size: 22px; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase; }
     .header-sub   { color: #DDF3EE; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 3px; }
 
-    /* PAGE COLUMN */
+    /* ── PAGE COLUMN ── */
     .page-col { max-width: 600px; margin: 0 auto; padding: 36px 24px 48px; }
 
-    /* EYEBROW / H1 / INTRO */
+    /* ── INTRO ── */
     .eyebrow { color: #007F79; font-size: 13px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
     h1 { font-size: 30px; font-weight: bold; line-height: 1.2; color: #132B3D; letter-spacing: -0.5px; margin-bottom: 14px; }
     .intro { font-size: 16px; color: #54717E; line-height: 1.65; margin-bottom: 28px; }
 
-    /* HERO */
+    /* ── HERO IMAGE ── */
     .hero-img { width: 100%; height: auto; display: block; border-radius: 10px; margin-bottom: 24px; }
 
-    /* BUTTONS */
-    .btn-teal { display: inline-block; background-color: #007F79; color: #FFFFFF; font-size: 14px; font-weight: bold; text-decoration: none; padding: 13px 24px; border-radius: 6px; letter-spacing: 0.8px; text-transform: uppercase; }
+    /* ── BUTTONS ── */
+    .btn-teal {
+      display: inline-block; background-color: #007F79; color: #FFFFFF;
+      font-size: 14px; font-weight: bold; text-decoration: none;
+      padding: 13px 24px; border-radius: 6px; letter-spacing: 0.8px; text-transform: uppercase;
+      transition: background-color 0.2s;
+    }
     .btn-teal:hover { background-color: #006b66; }
-    .btn-gold { display: inline-block; background-color: #E0A85F; color: #132B3D; font-size: 13px; font-weight: bold; text-decoration: none; padding: 12px 22px; border-radius: 6px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .btn-gold {
+      display: inline-block; background-color: #E0A85F; color: #132B3D;
+      font-size: 13px; font-weight: bold; text-decoration: none;
+      padding: 12px 22px; border-radius: 6px; letter-spacing: 0.8px; text-transform: uppercase;
+      transition: background-color 0.2s;
+    }
     .btn-gold:hover { background-color: #c99045; }
 
-    /* SECTION LABEL */
+    /* ── SECTION LABEL ── */
     .section-label { color: #007F79; font-size: 13px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
 
-    /* CARDS */
+    /* ── THREE CARDS ── */
     .cards-row { display: table; width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; margin-bottom: 36px; }
     .card-cell { display: table-cell; width: 33.333%; vertical-align: top; padding-right: 14px; }
     .card-cell:last-child { padding-right: 0; }
     .card { background: #FFFFFF; border: 1px solid #CFE3DC; border-radius: 12px; padding: 18px 16px 20px; height: 100%; }
     .card-icon { width: 44px; height: 44px; display: block; margin-bottom: 14px; }
-    .card-num { color: #007F79; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .card-num   { color: #007F79; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
     .card-title { font-size: 15px; font-weight: bold; color: #132B3D; line-height: 1.3; margin-bottom: 8px; }
-    .card-desc { font-size: 13px; color: #54717E; line-height: 1.5; }
+    .card-desc  { font-size: 13px; color: #54717E; line-height: 1.5; }
 
-    /* BANNER */
-    .banner { background-color: #132B3D; border-radius: 12px; padding: 28px 24px; margin-bottom: 0; }
+    /* ── BANNER ── */
+    .banner { background-color: #132B3D; border-radius: 12px; padding: 28px 24px; margin-bottom: 36px; }
     .banner h2 { font-size: 22px; font-weight: bold; color: #FFFFFF; line-height: 1.25; margin-bottom: 8px; }
-    .banner p { font-size: 15px; color: #FFFFFF; line-height: 1.5; margin-bottom: 20px; }
+    .banner p  { font-size: 15px; color: #FFFFFF; line-height: 1.5; margin-bottom: 20px; }
 
-    /* FOOTER */
-    footer { border-top: 1px solid #CFE3DC; padding-top: 20px; margin-top: 36px; }
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid #CFE3DC; padding-top: 20px; }
     .footer-brand { font-size: 13px; font-weight: bold; color: #132B3D; margin-bottom: 4px; }
     .footer-note  { font-size: 12px; color: #54717E; margin-bottom: 3px; }
     .footer-links { font-size: 12px; margin-top: 12px; }
     .footer-links a { color: #007F79; text-decoration: none; }
     .footer-links a:hover { text-decoration: underline; }
 
-    /* MOBILE */
+    /* ── MOBILE ── */
     @media (max-width: 600px) {
       .page-col { padding: 28px 16px 40px; }
       h1 { font-size: 25px; }
@@ -70,6 +80,7 @@
 </head>
 <body>
 
+  <!-- ══ HEADER ══ -->
   <header>
     <div class="header-inner">
       <div class="header-title">SURESH KUMAR</div>
@@ -79,21 +90,25 @@
 
   <div class="page-col">
 
+    <!-- ══ PROMOTIONAL HERO & CONTENT ══ -->
     <div class="eyebrow">A BETTER WAY TO WORK</div>
     <h1>Small changes. Sharper teams.</h1>
     <p class="intro">A practical note on clear priorities, smoother handoffs, and weekly progress.</p>
 
-    <img src="images/hero_workflow.png" alt="Illustration of a team workflow dashboard" class="hero-img">
+    <img src="images/hero_workflow.png"
+         alt="Illustration of a team workflow dashboard"
+         class="hero-img"
+         width="552">
 
     <div style="margin-bottom:36px;">
-      <a href="framework.html" class="btn-teal">EXPLORE THE FRAMEWORK</a>
+      <a href="checklist.html#checklist" class="btn-teal">EXPLORE THE FRAMEWORK</a>
     </div>
 
     <div class="section-label">THREE IDEAS TO TAKE FORWARD</div>
     <div class="cards-row">
       <div class="card-cell">
         <div class="card">
-          <img src="images/icon_1_plan.png" alt="Plan with clarity" class="card-icon">
+          <img src="images/icon_1_plan.png" alt="Plan with clarity" class="card-icon" width="44" height="44">
           <div class="card-num">01 / CLARITY</div>
           <div class="card-title">Plan with a purpose</div>
           <div class="card-desc">Create a weekly view of the decisions that matter.</div>
@@ -101,7 +116,7 @@
       </div>
       <div class="card-cell">
         <div class="card">
-          <img src="images/icon_2_build.png" alt="Build momentum" class="card-icon">
+          <img src="images/icon_2_build.png" alt="Build momentum" class="card-icon" width="44" height="44">
           <div class="card-num">02 / MOMENTUM</div>
           <div class="card-title">Build lighter workflows</div>
           <div class="card-desc">Make handoffs clear, repeatable and easy to track.</div>
@@ -109,7 +124,7 @@
       </div>
       <div class="card-cell">
         <div class="card">
-          <img src="images/icon_3_improve.png" alt="Track progress" class="card-icon">
+          <img src="images/icon_3_improve.png" alt="Track progress" class="card-icon" width="44" height="44">
           <div class="card-num">03 / PROGRESS</div>
           <div class="card-title">Improve with evidence</div>
           <div class="card-desc">Review outcomes and keep the changes that work.</div>
@@ -117,31 +132,33 @@
       </div>
     </div>
 
+    <!-- ══ BANNER ══ -->
     <div class="banner">
       <h2>Ready for a clearer next week?</h2>
       <p>Get the checklist and start with one improvement.</p>
-      <a href="framework.html" class="btn-gold">READ THE CHECKLIST</a>
+      <a href="checklist.html#checklist" class="btn-gold">READ THE CHECKLIST</a>
     </div>
 
-    <!-- Invisible anchor targets for email footer link compatibility -->
+    <!-- Hidden anchor targets for direct hash compatibility -->
     <div id="preferences" style="height:1px;width:100%;clear:both;"></div>
     <div id="unsubscribe" style="height:1px;width:100%;clear:both;"></div>
-    <div id="contact"     style="height:1px;width:100%;clear:both;"></div>
+    <div id="contact" style="height:1px;width:100%;clear:both;"></div>
 
+    <!-- ══ FOOTER ══ -->
     <footer>
       <div class="footer-brand">Suresh Kumar &nbsp;|&nbsp; Studio Notes</div>
       <div class="footer-note">Monthly ideas on practical business operations.</div>
       <div class="footer-note">You are receiving this newsletter by subscription.</div>
       <div class="footer-links">
-        <a href="framework.html#preferences">Preferences</a>
+        <a href="checklist.html#preferences">Preferences</a>
         &nbsp;&bull;&nbsp;
-        <a href="framework.html#unsubscribe">Unsubscribe</a>
+        <a href="checklist.html#unsubscribe">Unsubscribe</a>
         &nbsp;&bull;&nbsp;
-        <a href="framework.html#contact">Contact</a>
+        <a href="checklist.html#contact">Contact</a>
       </div>
     </footer>
 
-  </div>
+  </div><!-- /page-col -->
 
 </body>
 </html>
