@@ -10,41 +10,47 @@
 
     /* ── HEADER ── */
     header { background-color: #132B3D; width: 100%; }
-    .header-inner { max-width: 600px; margin: 0 auto; padding: 20px 24px; }
+    .header-inner {
+      max-width: 600px; margin: 0 auto; padding: 20px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .header-branding { display: flex; flex-direction: column; }
     .header-title { color: #FFFFFF; font-size: 22px; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase; }
     .header-sub   { color: #DDF3EE; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 3px; }
+    .header-back {
+      color: #DDF3EE; font-size: 13px; font-weight: bold; text-decoration: none;
+      border: 1px solid rgba(221, 243, 238, 0.4); padding: 6px 14px; border-radius: 6px;
+      letter-spacing: 0.5px; text-transform: uppercase; transition: all 0.2s;
+    }
+    .header-back:hover { background-color: rgba(221, 243, 238, 0.15); color: #FFFFFF; border-color: #FFFFFF; }
 
     /* ── PAGE COLUMN ── */
     .page-col { max-width: 600px; margin: 0 auto; padding: 36px 24px 48px; }
 
-    /* ── INTRO ── */
+    /* ── LANDING VIEW STYLES ── */
     .eyebrow { color: #007F79; font-size: 13px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
     h1 { font-size: 30px; font-weight: bold; line-height: 1.2; color: #132B3D; letter-spacing: -0.5px; margin-bottom: 14px; }
     .intro { font-size: 16px; color: #54717E; line-height: 1.65; margin-bottom: 28px; }
-
-    /* ── HERO IMAGE ── */
     .hero-img { width: 100%; height: auto; display: block; border-radius: 10px; margin-bottom: 24px; }
 
-    /* ── BUTTONS ── */
+    /* Buttons */
     .btn-teal {
       display: inline-block; background-color: #007F79; color: #FFFFFF;
       font-size: 14px; font-weight: bold; text-decoration: none;
       padding: 13px 24px; border-radius: 6px; letter-spacing: 0.8px; text-transform: uppercase;
-      transition: background-color 0.2s;
+      cursor: pointer; transition: background-color 0.2s;
     }
     .btn-teal:hover { background-color: #006b66; }
     .btn-gold {
       display: inline-block; background-color: #E0A85F; color: #132B3D;
       font-size: 13px; font-weight: bold; text-decoration: none;
       padding: 12px 22px; border-radius: 6px; letter-spacing: 0.8px; text-transform: uppercase;
-      transition: background-color 0.2s;
+      cursor: pointer; transition: background-color 0.2s;
     }
     .btn-gold:hover { background-color: #c99045; }
 
-    /* ── SECTION LABEL ── */
+    /* Cards */
     .section-label { color: #007F79; font-size: 13px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
-
-    /* ── THREE CARDS ── */
     .cards-row { display: table; width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; margin-bottom: 36px; }
     .card-cell { display: table-cell; width: 33.333%; vertical-align: top; padding-right: 14px; }
     .card-cell:last-child { padding-right: 0; }
@@ -54,27 +60,71 @@
     .card-title { font-size: 15px; font-weight: bold; color: #132B3D; line-height: 1.3; margin-bottom: 8px; }
     .card-desc  { font-size: 13px; color: #54717E; line-height: 1.5; }
 
-    /* ── BANNER ── */
+    /* Banner */
     .banner { background-color: #132B3D; border-radius: 12px; padding: 28px 24px; margin-bottom: 36px; }
     .banner h2 { font-size: 22px; font-weight: bold; color: #FFFFFF; line-height: 1.25; margin-bottom: 8px; }
     .banner p  { font-size: 15px; color: #FFFFFF; line-height: 1.5; margin-bottom: 20px; }
 
+    /* ── CONTENTS VIEW STYLES ── */
+    .section-eyebrow {
+      color: #007F79; font-size: 12px; font-weight: bold;
+      letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .content-h2 {
+      font-size: 24px; font-weight: bold; color: #132B3D;
+      line-height: 1.3; margin-bottom: 22px; letter-spacing: -0.3px;
+    }
+    .divider { border: none; border-top: 1px solid #CFE3DC; margin: 32px 0; }
+    .anchor-section { scroll-margin-top: 24px; margin-bottom: 32px; }
+
+    /* Checklist List */
+    .checklist { list-style: none; margin: 0; padding: 0; }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 16px;
+      background: #FFFFFF; border: 1px solid #CFE3DC; border-radius: 12px;
+      padding: 18px 20px; margin-bottom: 14px;
+      box-shadow: 0 2px 6px rgba(19, 43, 61, 0.03);
+    }
+    .checklist li:last-child { margin-bottom: 0; }
+    .step-num {
+      flex-shrink: 0; width: 32px; height: 32px;
+      background-color: #DDF3EE; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: bold; color: #007F79;
+    }
+    .step-text { font-size: 15px; color: #132B3D; line-height: 1.55; padding-top: 4px; }
+
+    /* Info Cards */
+    .info-card {
+      background: #FFFFFF; border: 1px solid #CFE3DC; border-radius: 12px;
+      padding: 24px 22px; box-shadow: 0 2px 6px rgba(19, 43, 61, 0.03);
+    }
+    .info-card-label {
+      color: #007F79; font-size: 11px; font-weight: bold;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+    }
+    .info-card h3 { font-size: 18px; font-weight: bold; color: #132B3D; margin-bottom: 8px; }
+    .info-card p  { font-size: 14px; color: #54717E; line-height: 1.65; margin: 0; }
+
     /* ── FOOTER ── */
-    footer { border-top: 1px solid #CFE3DC; padding-top: 20px; }
+    footer { border-top: 1px solid #CFE3DC; padding-top: 20px; margin-top: 20px; }
     .footer-brand { font-size: 13px; font-weight: bold; color: #132B3D; margin-bottom: 4px; }
     .footer-note  { font-size: 12px; color: #54717E; margin-bottom: 3px; }
     .footer-links { font-size: 12px; margin-top: 12px; }
-    .footer-links a { color: #007F79; text-decoration: none; }
+    .footer-links a { color: #007F79; text-decoration: none; cursor: pointer; }
     .footer-links a:hover { text-decoration: underline; }
 
     /* ── MOBILE ── */
     @media (max-width: 600px) {
       .page-col { padding: 28px 16px 40px; }
+      .header-inner { padding: 18px 16px; }
       h1 { font-size: 25px; }
       .cards-row { display: block; }
       .card-cell { display: block; width: 100%; padding-right: 0; margin-bottom: 12px; }
       .card-cell:last-child { margin-bottom: 0; }
       .btn-teal, .btn-gold { display: block; width: 100%; text-align: center; }
+      .checklist li { padding: 14px 16px; gap: 12px; }
+      .info-card { padding: 20px 18px; }
     }
   </style>
 </head>
@@ -83,82 +133,209 @@
   <!-- ══ HEADER ══ -->
   <header>
     <div class="header-inner">
-      <div class="header-title">SURESH KUMAR</div>
-      <div class="header-sub">STUDIO NOTES &nbsp;/&nbsp; NOVEMBER 2026</div>
+      <div class="header-branding">
+        <div class="header-title">SURESH KUMAR</div>
+        <div class="header-sub">STUDIO NOTES &nbsp;/&nbsp; NOVEMBER 2026</div>
+      </div>
+      <a href="#overview" id="header-back-btn" class="header-back" style="display:none;" onclick="showLanding(); return false;">&larr; Back to Overview</a>
     </div>
   </header>
 
   <div class="page-col">
 
-    <!-- ══ PROMOTIONAL HERO & CONTENT ══ -->
-    <div class="eyebrow">A BETTER WAY TO WORK</div>
-    <h1>Small changes. Sharper teams.</h1>
-    <p class="intro">A practical note on clear priorities, smoother handoffs, and weekly progress.</p>
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- ══ VIEW 1: LANDING PAGE ONLY (Loaded by default)       ══ -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <div id="landing-view">
 
-    <img src="images/hero_workflow.png"
-         alt="Illustration of a team workflow dashboard"
-         class="hero-img"
-         width="552">
+      <div class="eyebrow">A BETTER WAY TO WORK</div>
+      <h1>Small changes. Sharper teams.</h1>
+      <p class="intro">A practical note on clear priorities, smoother handoffs, and weekly progress.</p>
 
-    <div style="margin-bottom:36px;">
-      <a href="checklist.html#checklist" class="btn-teal">EXPLORE THE FRAMEWORK</a>
-    </div>
+      <img src="images/hero_workflow.png"
+           alt="Illustration of a team workflow dashboard"
+           class="hero-img"
+           width="552">
 
-    <div class="section-label">THREE IDEAS TO TAKE FORWARD</div>
-    <div class="cards-row">
-      <div class="card-cell">
-        <div class="card">
-          <img src="images/icon_1_plan.png" alt="Plan with clarity" class="card-icon" width="44" height="44">
-          <div class="card-num">01 / CLARITY</div>
-          <div class="card-title">Plan with a purpose</div>
-          <div class="card-desc">Create a weekly view of the decisions that matter.</div>
+      <div style="margin-bottom:36px;">
+        <a href="#checklist" onclick="showContents('checklist'); return false;" class="btn-teal">EXPLORE THE FRAMEWORK</a>
+      </div>
+
+      <div class="section-label">THREE IDEAS TO TAKE FORWARD</div>
+      <div class="cards-row">
+        <div class="card-cell">
+          <div class="card">
+            <img src="images/icon_1_plan.png" alt="Plan with clarity" class="card-icon" width="44" height="44">
+            <div class="card-num">01 / CLARITY</div>
+            <div class="card-title">Plan with a purpose</div>
+            <div class="card-desc">Create a weekly view of the decisions that matter.</div>
+          </div>
+        </div>
+        <div class="card-cell">
+          <div class="card">
+            <img src="images/icon_2_build.png" alt="Build momentum" class="card-icon" width="44" height="44">
+            <div class="card-num">02 / MOMENTUM</div>
+            <div class="card-title">Build lighter workflows</div>
+            <div class="card-desc">Make handoffs clear, repeatable and easy to track.</div>
+          </div>
+        </div>
+        <div class="card-cell">
+          <div class="card">
+            <img src="images/icon_3_improve.png" alt="Track progress" class="card-icon" width="44" height="44">
+            <div class="card-num">03 / PROGRESS</div>
+            <div class="card-title">Improve with evidence</div>
+            <div class="card-desc">Review outcomes and keep the changes that work.</div>
+          </div>
         </div>
       </div>
-      <div class="card-cell">
-        <div class="card">
-          <img src="images/icon_2_build.png" alt="Build momentum" class="card-icon" width="44" height="44">
-          <div class="card-num">02 / MOMENTUM</div>
-          <div class="card-title">Build lighter workflows</div>
-          <div class="card-desc">Make handoffs clear, repeatable and easy to track.</div>
+
+      <div class="banner">
+        <h2>Ready for a clearer next week?</h2>
+        <p>Get the checklist and start with one improvement.</p>
+        <a href="#checklist" onclick="showContents('checklist'); return false;" class="btn-gold">READ THE CHECKLIST</a>
+      </div>
+
+      <!-- Landing View Footer -->
+      <footer>
+        <div class="footer-brand">Suresh Kumar &nbsp;|&nbsp; Studio Notes</div>
+        <div class="footer-note">Monthly ideas on practical business operations.</div>
+        <div class="footer-note">You are receiving this newsletter by subscription.</div>
+        <div class="footer-links">
+          <a href="#preferences" onclick="showContents('preferences'); return false;">Preferences</a>
+          &nbsp;&bull;&nbsp;
+          <a href="#unsubscribe" onclick="showContents('unsubscribe'); return false;">Unsubscribe</a>
+          &nbsp;&bull;&nbsp;
+          <a href="#contact" onclick="showContents('contact'); return false;">Contact</a>
         </div>
-      </div>
-      <div class="card-cell">
-        <div class="card">
-          <img src="images/icon_3_improve.png" alt="Track progress" class="card-icon" width="44" height="44">
-          <div class="card-num">03 / PROGRESS</div>
-          <div class="card-title">Improve with evidence</div>
-          <div class="card-desc">Review outcomes and keep the changes that work.</div>
+      </footer>
+
+    </div><!-- /landing-view -->
+
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- ══ VIEW 2: CONTENTS ONLY (Checklist, Settings & Links) ══ -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <div id="contents-view" style="display:none;">
+
+      <!-- SECTION 1: CHECKLIST -->
+      <section id="checklist" class="anchor-section">
+        <div class="section-eyebrow">WEEKLY WORKFLOW CHECKLIST</div>
+        <h2 class="content-h2">Three steps to a clearer week</h2>
+        <ul class="checklist">
+          <li>
+            <div class="step-num">1</div>
+            <div class="step-text">Write down this week's most important decision.</div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-text">Assign an owner and a next action.</div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-text">Review results and document one improvement.</div>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider">
+
+      <!-- SECTION 2: PREFERENCES -->
+      <section id="preferences" class="anchor-section">
+        <div class="info-card">
+          <div class="info-card-label">SUBSCRIPTION</div>
+          <h3>Preferences</h3>
+          <p>Subscription preferences can be managed through your authorized newsletter provider.</p>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- ══ BANNER ══ -->
-    <div class="banner">
-      <h2>Ready for a clearer next week?</h2>
-      <p>Get the checklist and start with one improvement.</p>
-      <a href="checklist.html#checklist" class="btn-gold">READ THE CHECKLIST</a>
-    </div>
+      <!-- SECTION 3: UNSUBSCRIBE -->
+      <section id="unsubscribe" class="anchor-section">
+        <div class="info-card">
+          <div class="info-card-label">OPT OUT</div>
+          <h3>Unsubscribe</h3>
+          <p>Use the unsubscribe action supplied by the authorized email platform before distributing any messages.</p>
+        </div>
+      </section>
 
-    <!-- Hidden anchor targets for direct hash compatibility -->
-    <div id="preferences" style="height:1px;width:100%;clear:both;"></div>
-    <div id="unsubscribe" style="height:1px;width:100%;clear:both;"></div>
-    <div id="contact" style="height:1px;width:100%;clear:both;"></div>
+      <!-- SECTION 4: CONTACT -->
+      <section id="contact" class="anchor-section">
+        <div class="info-card">
+          <div class="info-card-label">GET IN TOUCH</div>
+          <h3>Contact</h3>
+          <p>For inquiries, use the contact channel designated by your campaign administrator.</p>
+        </div>
+      </section>
 
-    <!-- ══ FOOTER ══ -->
-    <footer>
-      <div class="footer-brand">Suresh Kumar &nbsp;|&nbsp; Studio Notes</div>
-      <div class="footer-note">Monthly ideas on practical business operations.</div>
-      <div class="footer-note">You are receiving this newsletter by subscription.</div>
-      <div class="footer-links">
-        <a href="checklist.html#preferences">Preferences</a>
-        &nbsp;&bull;&nbsp;
-        <a href="checklist.html#unsubscribe">Unsubscribe</a>
-        &nbsp;&bull;&nbsp;
-        <a href="checklist.html#contact">Contact</a>
-      </div>
-    </footer>
+      <!-- Contents View Footer -->
+      <footer>
+        <div class="footer-brand">Suresh Kumar &nbsp;|&nbsp; Studio Notes</div>
+        <div class="footer-note">Monthly ideas on practical business operations.</div>
+        <div class="footer-note">You are receiving this newsletter by subscription.</div>
+        <div class="footer-links">
+          <a href="#checklist" onclick="scrollToAnchor('checklist'); return false;">Checklist</a>
+          &nbsp;&bull;&nbsp;
+          <a href="#preferences" onclick="scrollToAnchor('preferences'); return false;">Preferences</a>
+          &nbsp;&bull;&nbsp;
+          <a href="#unsubscribe" onclick="scrollToAnchor('unsubscribe'); return false;">Unsubscribe</a>
+          &nbsp;&bull;&nbsp;
+          <a href="#contact" onclick="scrollToAnchor('contact'); return false;">Contact</a>
+          &nbsp;&bull;&nbsp;
+          <a href="#overview" onclick="showLanding(); return false;">&larr; Back to Overview</a>
+        </div>
+      </footer>
+
+    </div><!-- /contents-view -->
 
   </div><!-- /page-col -->
+
+  <script>
+    function showContents(targetId) {
+      document.getElementById('landing-view').style.display = 'none';
+      document.getElementById('contents-view').style.display = 'block';
+      var backBtn = document.getElementById('header-back-btn');
+      if (backBtn) backBtn.style.display = 'inline-block';
+
+      if (targetId) {
+        history.pushState(null, '', '#' + targetId);
+        setTimeout(function() {
+          var el = document.getElementById(targetId);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 50);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function showLanding() {
+      document.getElementById('contents-view').style.display = 'none';
+      document.getElementById('landing-view').style.display = 'block';
+      var backBtn = document.getElementById('header-back-btn');
+      if (backBtn) backBtn.style.display = 'none';
+      history.pushState(null, '', window.location.pathname + window.location.search);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function scrollToAnchor(targetId) {
+      var el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function handleHash() {
+      var hash = window.location.hash.replace('#', '');
+      if (hash === 'checklist' || hash === 'preferences' || hash === 'unsubscribe' || hash === 'contact') {
+        showContents(hash);
+      } else if (hash === 'overview' || hash === '' || hash === 'landing') {
+        showLanding();
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', handleHash);
+    window.addEventListener('hashchange', handleHash);
+  </script>
 
 </body>
 </html>
