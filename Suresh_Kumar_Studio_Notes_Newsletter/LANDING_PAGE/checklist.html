@@ -3,173 +3,290 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weekly Workflow Checklist &amp; Settings — Suresh Kumar Studio Notes</title>
+  <title>Your Weekly Workflow Checklist — Suresh Kumar Studio Notes</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, Helvetica, sans-serif; background-color: #FAF8F3; color: #132B3D; line-height: 1.6; }
-
-    /* ── HEADER ── */
-    header { background-color: #132B3D; width: 100%; }
-    .header-inner {
-      max-width: 600px; margin: 0 auto; padding: 20px 24px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .header-branding { display: flex; flex-direction: column; }
-    .header-title { color: #FFFFFF; font-size: 22px; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase; }
-    .header-sub   { color: #DDF3EE; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 3px; }
-    .header-back {
-      color: #DDF3EE; font-size: 13px; font-weight: bold; text-decoration: none;
-      border: 1px solid rgba(221, 243, 238, 0.4); padding: 6px 14px; border-radius: 6px;
-      letter-spacing: 0.5px; text-transform: uppercase; transition: all 0.2s;
-    }
-    .header-back:hover { background-color: rgba(221, 243, 238, 0.15); color: #FFFFFF; border-color: #FFFFFF; }
-
-    /* ── PAGE COLUMN ── */
-    .page-col { max-width: 600px; margin: 0 auto; padding: 40px 24px 56px; }
-
-    /* ── DIVIDER ── */
-    .divider { border: none; border-top: 1px solid #CFE3DC; margin: 32px 0; }
-
-    /* ── SECTIONS ── */
-    .anchor-section { scroll-margin-top: 24px; margin-bottom: 32px; }
-    .section-eyebrow {
-      color: #007F79; font-size: 12px; font-weight: bold;
-      letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;
-    }
-    h2 {
-      font-size: 24px; font-weight: bold; color: #132B3D;
-      line-height: 1.3; margin-bottom: 22px; letter-spacing: -0.3px;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #FAF8F3;
+      color: #132B3D;
+      line-height: 1.6;
     }
 
-    /* ── CHECKLIST LIST ── */
-    .checklist { list-style: none; margin: 0; padding: 0; }
-    .checklist li {
-      display: flex; align-items: flex-start; gap: 16px;
-      background: #FFFFFF; border: 1px solid #CFE3DC; border-radius: 12px;
-      padding: 18px 20px; margin-bottom: 14px;
-      box-shadow: 0 2px 6px rgba(19, 43, 61, 0.03);
+    /* ── PAGE CONTAINER ── */
+    .page-col {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
     }
-    .checklist li:last-child { margin-bottom: 0; }
-    .step-num {
-      flex-shrink: 0; width: 32px; height: 32px;
-      background-color: #DDF3EE; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px; font-weight: bold; color: #007F79;
-    }
-    .step-text { font-size: 15px; color: #132B3D; line-height: 1.55; padding-top: 4px; }
 
-    /* ── INFO CARDS ── */
-    .info-card {
-      background: #FFFFFF; border: 1px solid #CFE3DC; border-radius: 12px;
-      padding: 24px 22px; box-shadow: 0 2px 6px rgba(19, 43, 61, 0.03);
+    /* ── TOP NAV ── */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
     }
-    .info-card-label {
-      color: #007F79; font-size: 11px; font-weight: bold;
-      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+    .brand-eyebrow {
+      color: #54717E;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
-    .info-card h3 { font-size: 18px; font-weight: bold; color: #132B3D; margin-bottom: 8px; }
-    .info-card p  { font-size: 14px; color: #54717E; line-height: 1.65; margin: 0; }
+    .back-link {
+      color: #007F79;
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #006b66;
+      text-decoration: underline;
+    }
+
+    /* ── PAGE TITLE ── */
+    h1.page-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #132B3D;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+    p.page-subtitle {
+      font-size: 16px;
+      color: #54717E;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    /* ── TABS ── */
+    .nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .tab-btn {
+      display: inline-block;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #54717E;
+      background-color: #FFFFFF;
+      border: 1px solid #CFE3DC;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover {
+      background-color: #DDF3EE;
+      color: #007F79;
+      border-color: #007F79;
+    }
+    .tab-btn.active {
+      background-color: #007F79;
+      color: #FFFFFF;
+      border-color: #007F79;
+    }
+
+    /* ── CONTENT CARDS ── */
+    .content-card {
+      background: #FFFFFF;
+      border: 1px solid #CFE3DC;
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(19, 43, 61, 0.03);
+    }
+    .content-card h2 {
+      font-size: 22px;
+      font-weight: bold;
+      color: #132B3D;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .content-card p {
+      font-size: 15px;
+      color: #54717E;
+      line-height: 1.65;
+    }
+
+    /* Numbered checklist list */
+    .checklist-list {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .checklist-list li {
+      font-size: 15px;
+      color: #132B3D;
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .checklist-list li:last-child {
+      margin-bottom: 0;
+    }
 
     /* ── FOOTER ── */
-    footer { border-top: 1px solid #CFE3DC; padding-top: 24px; margin-top: 40px; }
-    .footer-brand { font-size: 13px; font-weight: bold; color: #132B3D; margin-bottom: 4px; }
-    .footer-note  { font-size: 12px; color: #54717E; margin-bottom: 3px; }
-    .footer-links { font-size: 12px; margin-top: 12px; }
-    .footer-links a { color: #007F79; text-decoration: none; }
-    .footer-links a:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid #CFE3DC;
+      padding-top: 24px;
+      margin-top: 36px;
+    }
+    .footer-brand {
+      font-size: 13px;
+      font-weight: bold;
+      color: #132B3D;
+      margin-bottom: 4px;
+    }
+    .footer-note {
+      font-size: 12px;
+      color: #54717E;
+      margin-bottom: 3px;
+    }
+    .footer-links {
+      font-size: 12px;
+      margin-top: 14px;
+    }
+    .footer-links a {
+      color: #007F79;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
 
     /* ── MOBILE ── */
     @media (max-width: 600px) {
-      .page-col { padding: 28px 16px 40px; }
-      .header-inner { padding: 18px 16px; }
-      h2 { font-size: 21px; }
-      .checklist li { padding: 14px 16px; gap: 12px; }
-      .info-card { padding: 20px 18px; }
+      .page-col {
+        padding: 32px 16px 48px;
+      }
+      h1.page-title {
+        font-size: 28px;
+      }
+      .content-card {
+        padding: 24px 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ══ HEADER ══ -->
-  <header>
-    <div class="header-inner">
-      <div class="header-branding">
-        <div class="header-title">SURESH KUMAR</div>
-        <div class="header-sub">STUDIO NOTES &nbsp;/&nbsp; NOVEMBER 2026</div>
-      </div>
-      <a href="index.html" class="header-back">&larr; Back</a>
-    </div>
-  </header>
-
   <div class="page-col">
 
-    <!-- ══ SECTION 1: WEEKLY WORKFLOW CHECKLIST ══ -->
-    <section id="checklist" class="anchor-section">
-      <div class="section-eyebrow">WEEKLY WORKFLOW CHECKLIST</div>
-      <h2>Three steps to a clearer week</h2>
-      <ul class="checklist">
-        <li>
-          <div class="step-num">1</div>
-          <div class="step-text">Write down this week's most important decision.</div>
-        </li>
-        <li>
-          <div class="step-num">2</div>
-          <div class="step-text">Assign an owner and a next action.</div>
-        </li>
-        <li>
-          <div class="step-num">3</div>
-          <div class="step-text">Review results and document one improvement.</div>
-        </li>
-      </ul>
-    </section>
+    <!-- ── TOP NAVIGATION ── -->
+    <div class="top-nav">
+      <div class="brand-eyebrow">SURESH KUMAR &middot; STUDIO NOTES</div>
+      <a href="index.html" class="back-link">&larr; Back to Landing Page</a>
+    </div>
 
-    <hr class="divider">
+    <!-- ── HEADER TITLE & SUBTITLE ── -->
+    <h1 class="page-title">Your Weekly Workflow Checklist</h1>
+    <p class="page-subtitle">Pick one clear priority, define the handoff and review what changed.</p>
 
-    <!-- ══ SECTION 2: PREFERENCES ══ -->
-    <section id="preferences" class="anchor-section">
-      <div class="info-card">
-        <div class="info-card-label">SUBSCRIPTION</div>
-        <h3>Preferences</h3>
-        <p>Subscription preferences can be managed through your authorized newsletter provider.</p>
-      </div>
-    </section>
+    <!-- ── SECTION FILTER TABS ── -->
+    <div class="nav-tabs">
+      <a href="#all" onclick="filterSection('all'); return false;" id="tab-all" class="tab-btn active">All</a>
+      <a href="#checklist" onclick="filterSection('checklist'); return false;" id="tab-checklist" class="tab-btn">Checklist</a>
+      <a href="#preferences" onclick="filterSection('preferences'); return false;" id="tab-preferences" class="tab-btn">Preferences</a>
+      <a href="#unsubscribe" onclick="filterSection('unsubscribe'); return false;" id="tab-unsubscribe" class="tab-btn">Unsubscribe</a>
+      <a href="#contact" onclick="filterSection('contact'); return false;" id="tab-contact" class="tab-btn">Contact</a>
+    </div>
 
-    <!-- ══ SECTION 3: UNSUBSCRIBE ══ -->
-    <section id="unsubscribe" class="anchor-section">
-      <div class="info-card">
-        <div class="info-card-label">OPT OUT</div>
-        <h3>Unsubscribe</h3>
-        <p>Use the unsubscribe action supplied by the authorized email platform before distributing any messages.</p>
-      </div>
-    </section>
+    <!-- ── CARD 1: THREE-STEP CHECKLIST ── -->
+    <div id="checklist" class="content-card">
+      <h2>Three-step checklist</h2>
+      <ol class="checklist-list">
+        <li>Write down this week's most important decision.</li>
+        <li>Assign an owner and a next action.</li>
+        <li>Review results and document one improvement.</li>
+      </ol>
+    </div>
 
-    <!-- ══ SECTION 4: CONTACT ══ -->
-    <section id="contact" class="anchor-section">
-      <div class="info-card">
-        <div class="info-card-label">GET IN TOUCH</div>
-        <h3>Contact</h3>
-        <p>For inquiries, use the contact channel designated by your campaign administrator.</p>
-      </div>
-    </section>
+    <!-- ── CARD 2: PREFERENCES ── -->
+    <div id="preferences" class="content-card">
+      <h2>Preferences</h2>
+      <p>Subscription preferences can be managed through your authorized newsletter provider.</p>
+    </div>
 
-    <!-- ══ FOOTER ══ -->
+    <!-- ── CARD 3: UNSUBSCRIBE ── -->
+    <div id="unsubscribe" class="content-card">
+      <h2>Unsubscribe</h2>
+      <p>Use the unsubscribe action supplied by the authorized email platform before distributing any messages.</p>
+    </div>
+
+    <!-- ── CARD 4: CONTACT ── -->
+    <div id="contact" class="content-card">
+      <h2>Contact</h2>
+      <p>For inquiries, use the contact channel designated by your campaign administrator.</p>
+    </div>
+
+    <!-- ── FOOTER ── -->
     <footer>
       <div class="footer-brand">Suresh Kumar &nbsp;|&nbsp; Studio Notes</div>
       <div class="footer-note">Monthly ideas on practical business operations.</div>
       <div class="footer-note">You are receiving this newsletter by subscription.</div>
       <div class="footer-links">
-        <a href="#preferences">Preferences</a>
+        <a href="index.html">&larr; Back to Landing Page</a>
         &nbsp;&bull;&nbsp;
-        <a href="#unsubscribe">Unsubscribe</a>
-        &nbsp;&bull;&nbsp;
-        <a href="#contact">Contact</a>
-        &nbsp;&bull;&nbsp;
-        <a href="index.html">Overview</a>
+        <a href="#all" onclick="filterSection('all'); return false;">Show All Sections</a>
       </div>
     </footer>
 
   </div><!-- /page-col -->
 
+  <script>
+    function filterSection(id) {
+      var sections = ['checklist', 'preferences', 'unsubscribe', 'contact'];
+      var tabs = ['all', 'checklist', 'preferences', 'unsubscribe', 'contact'];
+
+      tabs.forEach(function(t) {
+        var tabEl = document.getElementById('tab-' + t);
+        if (tabEl) {
+          if (t === id) tabEl.classList.add('active');
+          else tabEl.classList.remove('active');
+        }
+      });
+
+      if (id === 'all') {
+        sections.forEach(function(s) {
+          var el = document.getElementById(s);
+          if (el) el.style.display = 'block';
+        });
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      } else {
+        sections.forEach(function(s) {
+          var el = document.getElementById(s);
+          if (el) {
+            if (s === id) {
+              el.style.display = 'block';
+            } else {
+              el.style.display = 'none';
+            }
+          }
+        });
+        history.replaceState(null, '', '#' + id);
+      }
+    }
+
+    function handleHash() {
+      var hash = window.location.hash.replace('#', '');
+      if (hash === 'checklist' || hash === 'preferences' || hash === 'unsubscribe' || hash === 'contact') {
+        filterSection(hash);
+      } else {
+        filterSection('all');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', handleHash);
+    window.addEventListener('hashchange', handleHash);
+  </script>
+
 </body>
 </html>
-
